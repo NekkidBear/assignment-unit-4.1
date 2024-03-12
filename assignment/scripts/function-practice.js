@@ -76,11 +76,6 @@ console.log('Test: should return "eureka!"', getLast(myArray));
 
 //end function getLast
 
-console.log('Test: should return undefined for an empty array', getLast(myArray));
-console.log('array: [1,1,2,3, "eureka!"]');
-myArray = [1,1,2,3,"eureka!"];
-console.log('Test: should return "eureka!"', getLast(myArray));
-
 // 7. Function to find a value in an array. Return true if the 
 //    value is found and false otherwise. Use a loop;
 //    DO NOT use Array.includes, Array.indexOf, or Array.find 
