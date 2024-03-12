@@ -110,9 +110,25 @@ console.log('Test: value not found; should return false', find(testValue, testAr
 // 8. Function to check if a letter is the first letter in a 
 //    string. Return true if it is, and false otherwise
 function isFirstLetter(letter, string) {
-
+  if(letter === string[0].toLowerCase()){
+    return true;
+  } else {
+    return false;
+  }
 }
-
+let myString = "Bunk Beds starts with 'b'.";
+let myLetter = "b";
+console.log ("Test: should return true");
+console.log ("String:" , myString);
+console.log ("Letter: ", myLetter);
+console.log (isFirstLetter(myLetter, myString));
+console.log ("Test: should return false");
+myLetter = "f";
+console.log("Test letter: ", myLetter);
+myString = "Bunk Beds starts with 'f'.";
+console.log("Test string: ", myString);
+console.log(isFirstLetter(myLetter, myString));
+// end function isFirstLetter
 
 // 9. Function to return the sum of all numbers in an array
 function sumAll(array) {
