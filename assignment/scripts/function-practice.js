@@ -204,7 +204,7 @@ function findSmallestInt(array){
   //loop through the array
   for (let i = 0; i<=array.length-1; i++){
     //if the current value is an integer, return it and stop checking.
-    if(typeof array[i] === "int"){
+    if(Number.isInteger(array[i])){
       return array[i];
     } else {
     //otherwise, move to the next element.
