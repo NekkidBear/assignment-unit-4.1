@@ -156,12 +156,33 @@ console.log("Sum is ", sumAll(myArray));
 //     numbers contained in an input array. If there are no positive numbers
 //     return an empty array. Note: The input array should not change.
 function allPositive(array) {
-  return array.filter(isPositive());
+  //create a destination array
+  let positiveValues = [];
+  //loop through each value in the array
+  for (let i = 0; i<=array.length-1; i++) // Declares a loop starting at 0 and going through each index until the last item, and increments the number
+    {
+      //determine if that value is positive (greater than 0)
+      console.log("Test Value:", array[i]);
+      if(isPositive(array[i])){
+        //  copy the positive value into the destination array
+        positiveValues.push(array[i]);
+        console.log("added to the list");
+        //  continue to the next value
+        continue;
+      } else {
+      // if the value is not positive, skip it and move to the next one
+        console.log("Nope. Skipping this one");
+        continue;
+      }
+    }
+  //once you have gone through all of the elements, return the list of positive values
+  return positiveValues;
 }
 
 console.log("test: Return all positive values in the array [-5,-4,-3,-2,-1, 0, 1, 2, 3, 4, 5, 5.5, 6]")
 let myNewArray = [-5,-4,-3,-2,-1, 0, 1, 2, 3, 4, 5, 5.5, 6];
 console.log("positive values: ", allPositive(myNewArray));
+console.log(myNewArray);
 
 // 11. Pick a problem from Edabit(https://edabit.com/) or 
 //     CodeWars(https://www.codewars.com/). Then describe it 
