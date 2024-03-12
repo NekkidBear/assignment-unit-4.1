@@ -67,6 +67,8 @@ function getLast(array) {
   } else {
     lastValue = array.pop();
     return lastValue;
+    lastValue = array.pop();
+    return lastValue;
   }
 }
 myArray = []
