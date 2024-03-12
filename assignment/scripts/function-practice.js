@@ -20,7 +20,7 @@ function helloName(name) {
   return `Hello, ${name}!`;
 }
 // Remember to call the function to test
-console.log('Test - should say Hello, Jason!', helloName("Jason"));
+console.log('Test - should say "Hello, Jason!"', helloName("Jason"));
 
 //end function helloName
 
@@ -75,8 +75,8 @@ function getLast(array) {
 myArray = []
 console.log('myArray: ', myArray);
 console.log('Test: should return undefined for an empty array', getLast(myArray));
-console.log('array: [1,1,2,3, "eureka!"]');
 myArray=[1,1,2,3,5, "eureka!"];
+console.log ("array: ", myArray);
 console.log('updated array length', myArray.length)
 console.log('Test: should return "eureka!"', getLast(myArray));
 
@@ -134,7 +134,7 @@ console.log(isFirstLetter(myLetter, myString));
 function sumAll(array) {
   let sum = 0;
   // TODO: loop to add items
-  for (let i = 0; i<=array.length; i++){
+  for (let i = 0; i<=array.length-1; i++){
     //validate that the current value is numeric
     if(typeof array[i]=== "number"){
       sum+= array[i];
