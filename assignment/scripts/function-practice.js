@@ -134,9 +134,23 @@ console.log(isFirstLetter(myLetter, myString));
 function sumAll(array) {
   let sum = 0;
   // TODO: loop to add items
-
+  for (let i = 0; i<=array.length; i++){
+    //validate that the current value is numeric
+    if(typeof array[i]=== "number"){
+      sum+= array[i];
+    } else {
+      console.log("skipping non-numeric value");
+    }
+  }
   // TODO: return the sum
+  return sum;
 }
+
+myArray = [1,1,2,3,5,"eureka", 8,11];
+console.log("My array:", myArray);
+console.log("Test should return the sum of all numbers in the array. expected answer: 31.");
+console.log("Sum is ", sumAll(myArray));
+//end function sumAll
 
 // 10. Function to return a new array of all positive (greater than zero)
 //     numbers contained in an input array. If there are no positive numbers
