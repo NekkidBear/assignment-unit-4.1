@@ -134,7 +134,7 @@ console.log(isFirstLetter(myLetter, myString));
 function sumAll(array) {
   let sum = 0;
   // TODO: loop to add items
-  for (let i = 0; i<=array.length; i++){
+  for (let i = 0; i<=array.length-1; i++){
     //validate that the current value is numeric
     if(typeof array[i]=== "number"){
       sum+= array[i];
