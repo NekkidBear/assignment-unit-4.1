@@ -65,13 +65,16 @@ function getLast(array) {
   if (array.length === 0){
     return undefined;
   } else {
-    return array[-1];
+    lastValue = array.pop();
+    return lastValue;
   }
 }
 myArray = []
+console.log('myArray: ', myArray);
 console.log('Test: should return undefined for an empty array', getLast(myArray));
 console.log('array: [1,1,2,3, "eureka!"]');
-myArray = [1,1,2,3,"eureka!"];
+myArray=[1,1,2,3,"eureka!"];
+console.log('updated array length', myArray.length)
 console.log('Test: should return "eureka!"', getLast(myArray));
 
 //end function getLast
@@ -80,8 +83,25 @@ console.log('Test: should return "eureka!"', getLast(myArray));
 //    value is found and false otherwise. Use a loop;
 //    DO NOT use Array.includes, Array.indexOf, or Array.find 
 function find(value, array) {
+  for(let i = 0; i<=array.length; i++){
+    if (value === array[i]){
+      return true;
+    } else {
+      return false;
+    }
 
+  }
 }
+let testArray = myArray;
+let testValue = 1;
+console.log('Test array:" ', testArray);
+console.log('value to find: ', testValue);
+console.log('Test: value found should return true', find(testValue, testArray));
+testValue = 5;
+console.log('next test: ', testValue);
+console.log('Test: value not found; should return false', find(testValue, testArray));
+
+//end function find
 
 // ----------------------
 // Stretch Goals
