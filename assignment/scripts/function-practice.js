@@ -188,6 +188,41 @@ console.log(myNewArray);
 //     CodeWars(https://www.codewars.com/). Then describe it 
 //     here in a comment, write the function, and test it!
 
+/* This is the description from CodeWars:
+
+Given an array of integers your solution should find the smallest integer.
+
+For example:
+
+Given [34, 15, 88, 2] your solution will return 2
+Given [34, -345, -1, 100] your solution will return -345
+You can assume, for the purpose of this kata, that the supplied array will not be empty. */
+
+function findSmallestInt(array){
+  //sort the array smallest to largest
+  array = array.sort((a, b) => a - b);
+  //loop through the array
+  for (let i = 0; i<=array.length-1; i++){
+    //if the current value is an integer, return it and stop checking.
+    if(typeof array[i] === "int"){
+      return array[i];
+    } else {
+    //otherwise, move to the next element.
+    continue;
+    }
+  }
+}
+
+testArray = [34, 15, 88, 2];
+let smallestInt = findSmallestInt(testArray);
+console.log("Testing with ", testArray);
+console.log("Expected Answer: 2");
+console.log("Smallest integer is ", smallestInt);
+testArray = [34, -345, -1, 100];
+smallestInt = findSmallestInt(testArray);
+console.log("new test", testArray);
+console.log("Expected Answer: -345");
+console.log("Smallest integer is ", smallestInt);
 
 // DO NOT MODIFY
 // Used for automated testing
